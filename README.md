@@ -13,7 +13,7 @@ this git is containing a **docker-compose** template file for deploying applicca
 	* a container microservice of managing projects: ***k8s-aepc-bs-ms-project***
 	* a container microservice of managing companies: ***k8s-aepc-bs-ms-company***
 
-the backend(a spring boot microservices-base application) is located [back]()
+the backend(a spring boot microservices-base application) is located here: [backend](https://github.com/placidenduwayo1/K8s-AEPC-Back.git)
 
 ## microservices configuration server
 - all services (utility services and business services) configiration files for config server are located here: 
