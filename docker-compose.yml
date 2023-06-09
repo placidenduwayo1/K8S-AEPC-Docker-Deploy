@@ -1,0 +1,71 @@
+version: '3.4'
+
+services:
+
+  k8s-aepc-ms-config-server:
+    image: placidenduwayo1/k8s-aepc-ms-config-server:latest # if image exists in placidenduwayo1 docker hub it will be pulled in local if not it will be constructed from Dockerfile
+    container_name: k8s-aepc-ms-config-server
+    ports:
+      - "8280:8280"
+    networks:
+      - apis-network
+    build:
+      context: ../K8s-AEPC-Back/k8s-ms-config-service
+      dockerfile: Dockerfile
+
+  k8s-aepc-ms-registry:
+    image: placidenduwayo1/k8s-aepc-ms-registry:latest
+    container_name: k8s-aepc-ms-registry
+    build:
+      context: ../K8s-AEPC-Back/k8s-ms-registry-service
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    networks:
+      - apis-network
+
+  k8s-aepc-bs-ms-address:
+    image: placidenduwayo1/k8s-aepc-bs-ms-address:latest
+    container_name: k8s-aepc-bs-ms-address
+    build:
+      context: ../K8s-AEPC-Back/k8s-clean-archi-ms-address
+      dockerfile: Dockerfile
+    ports:
+      - "8282:8282"
+    networks:
+      - apis-network
+
+  k8s-aepc-bs-ms-company:
+    image: placidenduwayo1/k8s-aepc-bs-ms-company:latest
+    container_name: k8s-aepc-bs-ms-company
+    build:
+      context: ../K8s-AEPC-Back/k8s-clean-archi-ms-company
+      dockerfile: Dockerfile
+    ports:
+      - "8284:8284"
+    networks:
+      - apis-network
+
+  k8s-aepc-bs-ms-employee:
+    image: placidenduwayo1/k8s-aepc-bs-ms-employee:latest
+    container_name: k8s-aepc-bs-ms-employee
+    build:
+      context: ../K8s-AEPC-Back/k8s-clean-archi-ms-employee
+      dockerfile: Dockerfile
+    ports:
+      - "8283:8283"
+    networks:
+      - apis-network
+
+  k8s-aepc-bs-ms-project:
+    image: placidenduwayo1/k8s-aepc-bs-ms-project:latest
+    container_name: k8s-aepc-bs-ms-project
+    build:
+      context: ../K8s-AEPC-Back/k8s-clean-archi-ms-project
+      dockerfile: Dockerfile
+    ports:
+      - "8285:8285"
+    networks:
+      - apis-network
+networks:
+  apis-network:
