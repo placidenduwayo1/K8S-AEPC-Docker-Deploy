@@ -16,5 +16,6 @@ this git is containing a **docker-compose** template file for deploying applicca
 the backend(a spring boot microservices-base application) is located [back]()
 
 ## microservices configuration server
-- all services (utility services and business services) configiration files for config server are located here: [ms-config](https://github.com/placidenduwayo1/K8s-AEPC-ms-config-centralisation.git)
+- all services (utility services and business services) configiration files for config server are located here: 
+	- [ms-config](https://github.com/placidenduwayo1/K8s-AEPC-ms-config-centralisation.git)
 
