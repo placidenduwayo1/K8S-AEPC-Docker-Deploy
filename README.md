@@ -17,5 +17,5 @@ the backend(a spring boot microservices-base application) is located here: [back
 
 ## microservices configuration server
 - all services (utility services and business services) configiration files for config server are located here: 
-	- [ms-config](https://github.com/placidenduwayo1/K8s-AEPC-ms-config-centralisation.git)
+	- [ms-config](https://github.com/placidenduwayo1/config-files-center/tree/main/for-k8s-aepc-back-project)
 
